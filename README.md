@@ -78,3 +78,22 @@ Roll a number of dice and return the highest (advantage) or lowest (disadvantage
 **RETURNS**
 
 * `result` (int) - The highest (advantage) or lowest (disadvantage) dice roll.
+
+
+
+###  dicebag.roll_custom_dice(sides)
+
+Roll a custom die. This die can have sides with different weights and different values.
+
+  
+
+**PARAMETERS**
+
+* `sides` (Array) - A table describing the sides of the die in the format `[[weight1, value1], [weight2, value2] ...]`. Note that the value can be any type, not just int.
+
+  
+
+**RETURNS**
+
+* `value` (Variant) - The value as specified in Array `sides`.
+
