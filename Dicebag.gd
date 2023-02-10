@@ -42,29 +42,10 @@ func roll_special_dice(num_sides:int = 6, advantage:bool = true, num_dice:int = 
 				
 	return max_or_min_roll
 
-	
-# Roll a custom die. Parameter sides is an array in the format [[weight1, value1], [weight2, value2] ...]. Returns the value of the rolled side.
-func roll_custom_dice(sides):
-	var total_weight = 0
-	var num_sides = sides.size()
 
-	# count up the total weight
-	for i in range(0, num_sides):
-		total_weight += sides[i][0]
 
-	var weight_result = randf() * total_weight
 
-	var processed_weight = 0
-	for i in range(1, num_sides):
-		if weight_result <= sides[i][0] + processed_weight:
-			return sides[i][1]
-		else:
-			processed_weight += sides[i][0]
-
-	return 0
-	
-
-#Magnus loot table
+# Roll a user defined die. Useful for loot tables. Parameter sides is an array in the format [[weight1, value1], [weight2, value2] ...]. Returns the value of the rolled side.
 
 func roll_loot(weighted_loot_table):
 	var total_weight = 0
@@ -73,10 +54,11 @@ func roll_loot(weighted_loot_table):
 	# count up the total weight
 	for item in weighted_loot_table:
 		total_weight += item[0]
-
+	
+	#get random number within the total weight
 	var random_num = randf() * total_weight
-	print(random_num)
-
+	
+	#find corrosponding die side and return it.
 	for item in weighted_loot_table:
 		if random_num <= item[0] + acc_weight:
 			return item[1]
