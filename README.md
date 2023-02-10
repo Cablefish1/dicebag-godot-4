@@ -21,6 +21,9 @@ Then you can use Dicebag functions, for example:
 ```
 var coin = dicebag.flip_coin()
 ```
+
+Remember to do a `randomize()` if you don't want your results to repeat.
+
 #  Usage
 
   
