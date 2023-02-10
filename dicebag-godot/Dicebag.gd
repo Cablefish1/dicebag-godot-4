@@ -23,7 +23,7 @@ func roll_dice(num_dice = 1, num_sides = 6, modifier = 0) -> int:
 	return result
 
 #Roll one or more dice with advantage or disadvantage (if advantage is not true rolls are disadvantaged). Returns the highest (advantage) or lowest (disadvantage) value of all rolls.
-#This script was broken in version 3.X. I simplified it and rewrote it from the ground up. - Cablefish
+#This script was broken in godot 3.5.1. I simplified it and rewrote it from the ground up. - Cablefish
 func roll_special_dice(num_sides:int = 6, advantage:bool = true, num_dice:int = 2) -> int:
 	var max_or_min_roll = 1
 	var roll
@@ -45,9 +45,11 @@ func roll_special_dice(num_sides:int = 6, advantage:bool = true, num_dice:int = 
 
 
 
-# Roll a user defined die. Useful for loot tables. Parameter weighted is an array in the format [[weight1, value1], [weight2, value2] ...]. Returns the value of the rolled side.
+# Pick a random place in a user defined table. I.e. a loot table.
+# Parameter weighted_loot_table is an array in the format [[weight1, value1], [weight2, value2] ...].
+# The function adds the weights and returns a random value based on the weighted probabilities.
 
-func roll_loot(weighted_loot_table):
+func roll_table(weighted_loot_table):
 	var total_weight = 0
 	var acc_weight = 0
 
@@ -58,7 +60,7 @@ func roll_loot(weighted_loot_table):
 	#get random number within the total weight
 	var random_num = randf() * total_weight
 	
-	#find corrosponding die side and return it.
+	#find corrosponding die side and return its value.
 	for item in weighted_loot_table:
 		if random_num <= item[0] + acc_weight:
 			return item[1]
