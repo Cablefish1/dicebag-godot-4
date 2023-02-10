@@ -5,6 +5,8 @@ Converted to Godot 3.2 by [yagich](https://github.com/yagich)
 
 Converted again to Godot 4.0 by [cablefish1](https://github.com/cablefish1) who removed some functions and rewrote some.
 
+Join the [RPGodot discord](https://discord.gg/2ZAdwyG6Sv) to join the development of more universal RPG tools.
+
 
 ## Installation
 You can add Dicebag to your own projects using the built-in [Asset Library](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html#in-the-editor).
