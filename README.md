@@ -3,14 +3,14 @@ A Godot 4 port of Dicebag by [8bitskull](https://github.com/8bitskull), original
 
 Converted to Godot 3.2 by [yagich](https://github.com/yagich)
 
-[cablefish1](https://github.com/cablefish1) removed some functions and converted the rest to godot 4.0
+Converted again to Godot 4.0 by [cablefish1](https://github.com/cablefish1) who removed some functions and rewrote some.
 
 
 ## Installation
 You can add Dicebag to your own projects using the built-in [Asset Library](https://docs.godotengine.org/en/latest/community/asset_library/using_assetlib.html#in-the-editor).
 Once it is added to your project, you need to add an instance of Dicebag to the script you wish to use it in, before the `_ready()` function:
 ```
-onready var dicebag = Dicebag.new()
+@onready var dicebag = Dicebag.new()
 
 func _ready():
 ...
