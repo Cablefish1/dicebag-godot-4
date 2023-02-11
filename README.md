@@ -1,6 +1,8 @@
 # dicebag
 A Godot 4 port of Dicebag by [8bitskull](https://github.com/8bitskull), originally in Lua for Defold.
 
+It contains various random dice and RNG functions that are useful for anyone making RPG's and especially those that emulate tabletop RPGs.
+
 Converted to Godot 3.2 by [yagich](https://github.com/yagich)
 
 Converted again to Godot 4.0 by [cablefish1](https://github.com/cablefish1) who removed some functions and rewrote some.
