@@ -86,19 +86,18 @@ Roll a number of dice and return the highest (advantage) or lowest (disadvantage
 
 
 
-###  dicebag.roll_custom_dice(sides)
+###  dicebag.roll_table(sides)
 
-Roll a custom die. This die can have sides with different weights and different values.
-
+ Pick a random place in a user defined table. I.e. a loot table.
   
 
 **PARAMETERS**
 
-* `sides` (Array) - A table describing the sides of the die in the format `[[weight1, value1], [weight2, value2] ...]`. Note that the value can be any type, not just int.
 
+* `weighted_loot_table` is an array in the format [[weight1, value1], [weight2, value2] ...]. The function adds the weights and returns a random value based on the weighted probabilities.
   
 
 **RETURNS**
 
-* `value` (Variant) - The value as specified in Array `sides`.
+* `value` (Variant) - The value as specified in Array `weighted_loot_table`.
 
